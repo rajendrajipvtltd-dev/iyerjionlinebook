@@ -193,7 +193,7 @@
             text-decoration: none;
         }
 
-        /* live odds section */
+        /* sections */
         .section {
             max-width: 1300px;
             margin: 0 auto;
@@ -208,6 +208,69 @@
             font-family: 'Orbitron', monospace;
         }
 
+        /* partners grid */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .partner-card {
+            background: var(--bg-card);
+            border-radius: 28px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid var(--border-dim);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .partner-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1E1E2A, #0A0A0F);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.8rem;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .partner-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .partner-link {
+            display: inline-block;
+            margin-top: 15px;
+            background: rgba(255, 217, 102, 0.1);
+            padding: 10px 25px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .partner-link:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* odds grid */
         .odds-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -225,7 +288,6 @@
         .match-card:hover {
             border-color: var(--gold);
             transform: translateY(-6px);
-            box-shadow: 0 20px 30px -12px black;
         }
 
         .match-teams {
@@ -263,7 +325,6 @@
             transform: scale(1.02);
         }
 
-        /* betting slip simulation */
         .bet-slip {
             background: #0C0C12;
             border-radius: 32px;
@@ -290,7 +351,6 @@
             width: 200px;
         }
 
-        /* stats */
         .stats-row {
             display: flex;
             justify-content: space-around;
@@ -313,7 +373,6 @@
             color: var(--gold);
         }
 
-        /* features */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -336,7 +395,6 @@
             margin-bottom: 20px;
         }
 
-        /* winners table */
         .winner-table {
             width: 100%;
             background: #0E0E16;
@@ -355,7 +413,6 @@
             color: var(--gold);
         }
 
-        /* live score widget styles */
         .live-score-widget {
             background: #0C0C12;
             border-radius: 32px;
@@ -363,6 +420,7 @@
             margin-bottom: 50px;
             border: 1px solid var(--border-dim);
         }
+
         .live-score-header {
             display: flex;
             justify-content: space-between;
@@ -371,12 +429,14 @@
             flex-wrap: wrap;
             gap: 15px;
         }
+
         .match-info {
             background: #1E1E2A;
             padding: 10px 20px;
             border-radius: 40px;
             font-weight: bold;
         }
+
         .score-board {
             display: flex;
             justify-content: space-around;
@@ -385,23 +445,22 @@
             flex-wrap: wrap;
             gap: 20px;
         }
+
         .team-score {
             flex: 1;
         }
+
         .team-name {
             font-size: 1.5rem;
             font-weight: 800;
         }
+
         .runs {
             font-size: 2.5rem;
             font-weight: 800;
             color: var(--gold);
         }
-        .update-time {
-            text-align: right;
-            font-size: 0.8rem;
-            color: #777;
-        }
+
         .status-badge {
             background: #D4AF37;
             color: #000;
@@ -410,7 +469,7 @@
             font-weight: bold;
             display: inline-block;
         }
-        /* footer */
+
         footer {
             background: #030308;
             padding: 60px 30px 30px;
@@ -434,6 +493,23 @@
 
         .social-icons a:hover {
             color: var(--gold);
+        }
+
+        .floating-chat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            z-index: 99;
         }
 
         @media (max-width: 800px) {
@@ -460,23 +536,6 @@
                 padding: 50px 20px;
             }
         }
-
-        .floating-chat {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-            z-index: 99;
-        }
     </style>
 </head>
 <body>
@@ -494,6 +553,7 @@
             <li><a href="#odds">Live Odds</a></li>
             <li><a href="#features">Perks</a></li>
             <li><a href="#winners">Winners</a></li>
+            <li><a href="#partners">Partners</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#" class="btn-outline-gold">VIP Login</a></li>
         </ul>
@@ -531,7 +591,6 @@
             <div class="status-badge" id="matchStatus">LIVE</div>
         </div>
         <div id="liveScoreContent">
-            <!-- Dynamic score content will be injected here -->
             <div class="score-board">
                 <div class="team-score">
                     <div class="team-name" id="team1Name">Mumbai Indians</div>
@@ -548,16 +607,15 @@
             <div class="update-time" id="updateTime">Last updated: Just now</div>
         </div>
         <div style="text-align: center; margin-top: 15px; font-size: 0.8rem;">
-            <i class="fas fa-info-circle"></i> Live scores update automatically. For video streaming, please check official broadcaster JioHotstar.
+            <i class="fas fa-info-circle"></i> Live scores update automatically. For video streaming, please check official broadcaster.
         </div>
     </div>
 </section>
 
-<!-- LIVE ODDS SECTION (BETS DESIGN) -->
+<!-- LIVE ODDS SECTION -->
 <section id="odds" class="section">
     <h2 class="section-title"><span class="gold-text">🔥 LIVE BETTING ODDS 🔥</span></h2>
-    <div class="odds-grid" id="oddsGrid">
-        <!-- dynamic odds via JS, but static placeholder -->
+    <div class="odds-grid">
         <div class="match-card">
             <div class="match-teams"><span>MI</span> <span>VS</span> <span>CSK</span></div>
             <div class="odds-row"><span>🏏 MI Win</span><button class="odd-btn" data-match="MI vs CSK" data-team="MI">1.85x</button></div>
@@ -578,7 +636,6 @@
         </div>
     </div>
 
-    <!-- Interactive Bet Slip Demo -->
     <div class="bet-slip">
         <h3><i class="fas fa-receipt"></i> QUICK BET SLIP (DEMO)</h3>
         <p>Click on any odd above, then enter amount to simulate bet request</p>
@@ -589,6 +646,37 @@
         </div>
         <p id="betFeedback" style="font-size: 0.9rem; color: var(--gold);"></p>
         <small>*Demo interaction — Real bets placed via WhatsApp/Telegram</small>
+    </div>
+</section>
+
+<!-- PARTNERS SECTION (Clients with logos & links) -->
+<section id="partners" class="section">
+    <h2 class="section-title"><span class="gold-text">🤝 OUR PREMIUM PARTNERS 🤝</span></h2>
+    <div class="partners-grid">
+        <div class="partner-card">
+            <div class="partner-logo"><i class="fas fa-crown"></i></div>
+            <div class="partner-name">IYERJI.WIN</div>
+            <p>Official Iyer Ji Platform</p>
+            <a href="https://iyerji.win" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
+        </div>
+        <div class="partner-card">
+            <div class="partner-logo"><i class="fas fa-exchange-alt"></i></div>
+            <div class="partner-name">99EXCHS.LIVE</div>
+            <p>High Odds Exchange</p>
+            <a href="https://99exchs.live" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
+        </div>
+        <div class="partner-card">
+            <div class="partner-logo"><i class="fas fa-gamepad"></i></div>
+            <div class="partner-name">11XPLAYS.GAMES</div>
+            <p>Casino & Sports Games</p>
+            <a href="https://11xplays.games" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
+        </div>
+        <div class="partner-card">
+            <div class="partner-logo"><i class="fas fa-laser-focus"></i></div>
+            <div class="partner-name">LASER247S.CLUB</div>
+            <p>Live Anytime Anywhere</p>
+            <a href="https://laser247s.club" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
+        </div>
     </div>
 </section>
 
@@ -607,8 +695,7 @@
 <section id="winners" class="section">
     <h2 class="section-title">🏆 WEEKLY CHAMPIONS 🏆</h2>
     <table class="winner-table">
-        <thead><tr><th>Rank</th><th>Username</th><th>Prize (₹)</th><th>Date</th></tr>
-        </thead>
+        <thead><tr><th>Rank</th><th>Username</th><th>Prize (₹)</th><th>Date</th></tr></thead>
         <tbody>
             <tr><td>🥇 1</td><td>KingIyer_77</td><td>₹12,40,000</td><td>06 Apr 2026</td></tr>
             <tr><td>🥈 2</td><td>RohitPremium</td><td>₹8,75,000</td><td>06 Apr 2026</td></tr>
@@ -620,7 +707,7 @@
     <p style="text-align: right; margin-top: 20px;"><i class="fas fa-trophy"></i> Next big contest: 15th April – Grand ₹1CR GTD</p>
 </section>
 
-<!-- How to bet + Contact -->
+<!-- Contact Section -->
 <section id="contact" class="section">
     <h2 class="section-title">GET IN TOUCH WITH <span class="gold-text">IYER JI TEAM</span></h2>
     <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
@@ -686,7 +773,6 @@
         navLinks.classList.toggle('show');
     });
 
-    // close on click link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('show');
@@ -706,7 +792,7 @@
         });
     });
 
-    // Dynamic bet slip: capture odd click
+    // Bet slip logic
     const betInput = document.getElementById('selectedBet');
     const placeBtn = document.getElementById('placeBetBtn');
     const betFeedbackSpan = document.getElementById('betFeedback');
@@ -759,8 +845,7 @@
         }, 35);
     }
 
-    // --- LIVE IPL SCORE SIMULATION ---
-    // This simulates a live score update. In production, replace with actual API call.
+    // LIVE IPL SCORE SIMULATION
     let scoreInterval;
     let isLive = true;
     const team1NameElem = document.getElementById('team1Name');
@@ -769,10 +854,8 @@
     const team2ScoreElem = document.getElementById('team2Score');
     const team1OversElem = document.getElementById('team1Overs');
     const team2OversElem = document.getElementById('team2Overs');
-    const matchStatusElem = document.getElementById('matchStatus');
     const updateTimeElem = document.getElementById('updateTime');
 
-    // Sample IPL match data
     const matches = [
         { team1: "Mumbai Indians", team2: "Chennai Super Kings", score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" },
         { team1: "Royal Challengers B", team2: "Rajasthan Royals", score1: "210/5", overs1: "(20.0)", score2: "180/7", overs2: "(18.3)" },
@@ -780,8 +863,6 @@
         { team1: "Sunrisers Hyderabad", team2: "Punjab Kings", score1: "195/3", overs1: "(18.5)", score2: "150/6", overs2: "(17.2)" }
     ];
 
-    let matchIndex = 0;
-    let scoreIndex = 0;
     const scoreUpdates = [
         { score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" },
         { score1: "189/4", overs1: "(19.0)", score2: "125/3", overs2: "(15.0)" },
@@ -792,37 +873,32 @@
         { score1: "195/5", overs1: "(20.0)", score2: "150/6", overs2: "(20.0)" }
     ];
 
+    let matchIndex = 0;
+    let scoreIndex = 0;
+
     function updateLiveScore() {
         if (!isLive) return;
-        
         const currentMatch = matches[matchIndex];
         const currentUpdate = scoreUpdates[scoreIndex % scoreUpdates.length];
-        
         team1NameElem.innerText = currentMatch.team1;
         team2NameElem.innerText = currentMatch.team2;
         team1ScoreElem.innerText = currentUpdate.score1;
         team1OversElem.innerText = currentUpdate.overs1;
         team2ScoreElem.innerText = currentUpdate.score2;
         team2OversElem.innerText = currentUpdate.overs2;
-        
         const now = new Date();
         updateTimeElem.innerText = `Last updated: ${now.toLocaleTimeString()}`;
-        
         scoreIndex++;
-        
-        // Change match every 30 seconds for demo
         if (scoreIndex % 10 === 0) {
             matchIndex = (matchIndex + 1) % matches.length;
         }
     }
 
-    // Start live score simulation
     if (team1NameElem) {
         updateLiveScore();
-        scoreInterval = setInterval(updateLiveScore, 5000); // Update every 5 seconds
+        scoreInterval = setInterval(updateLiveScore, 5000);
     }
 
-    // Clean up interval on page unload (optional but good practice)
     window.addEventListener('beforeunload', () => {
         if (scoreInterval) clearInterval(scoreInterval);
     });
