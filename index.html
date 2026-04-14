@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>IYER JI ONLINE BOOK | India's #1 Betting Exchange Since 2006</title>
-    <meta name="description" content="IYER JI ONLINE BOOK - India's most trusted betting platform since 2006. Live odds, instant withdrawals, VIP perks. Join the winning community today!">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="IYER JI ONLINE BOOK - India's most trusted betting platform since 2006. Live odds, instant withdrawals, VIP perks.">
+    
+    <!-- Google Fonts: Bebas Neue + Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,32 +16,40 @@
             box-sizing: border-box;
         }
 
+        /* NEW COLOR SCHEME from user screenshot */
         :root {
-            --gold: #FFD966;
-            --gold-dark: #D4AF37;
-            --gold-glow: 0 0 20px rgba(255, 217, 102, 0.4);
-            --bg-dark: #0A0A0F;
-            --bg-card: #12121A;
-            --border-dim: rgba(255, 217, 102, 0.2);
-            --neon: #FFD966;
+            --bg-dark: #1f0104;      /* deep maroon/black */
+            --bg-card: #2c070b;
+            --primary-light: #c8d7f6; /* soft blue */
+            --white-smoke: #f8f9fa;
+            --gray-mid: #b9bdc7;
+            --accent-orange: #ea940c;  /* vibrant orange/gold */
+            --accent-glow: 0 0 15px rgba(234, 148, 12, 0.5);
+            --border-dim: rgba(200, 215, 246, 0.15);
         }
 
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-dark);
-            color: #EAEAEA;
+            color: var(--white-smoke);
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
-        /* animated background */
+        /* Headings and logo font - Bebas Neue */
+        h1, h2, h3, .logo, .partner-name, .team-name, .section-title, .nav-links a, .btn-outline-gold {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1px;
+        }
+
+        /* background effects with new color */
         .bg-glow {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 30%, #13131f 0%, #050508 100%);
+            background: radial-gradient(circle at 20% 30%, #2c0a0e 0%, #0f0103 100%);
             z-index: -2;
         }
 
@@ -47,7 +57,7 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255, 217, 102, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(234, 148, 12, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             filter: blur(100px);
             animation: drift 25s infinite alternate;
@@ -55,8 +65,8 @@
         }
 
         @keyframes drift {
-            0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-            100% { transform: translate(100px, 80px) scale(1.3); opacity: 0.8; }
+            0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+            100% { transform: translate(100px, 80px) scale(1.3); opacity: 0.7; }
         }
 
         /* navbar */
@@ -65,10 +75,10 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 10, 15, 0.9);
+            background: rgba(31, 1, 4, 0.92);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-dim);
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
         }
 
         .nav-container {
@@ -81,21 +91,22 @@
 
         .logo {
             display: flex;
-            align-items: baseline;
-            gap: 8px;
-            font-family: 'Orbitron', monospace;
-            font-size: 1.8rem;
+            align-items: center;
+            gap: 12px;
+            font-size: 2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #FFE6B3, var(--gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-orange);
+            text-shadow: var(--accent-glow);
         }
-
+        .logo i {
+            font-size: 2.2rem;
+            color: var(--accent-orange);
+        }
         .logo span {
             font-size: 1rem;
             background: none;
-            -webkit-text-fill-color: var(--gold);
+            color: var(--primary-light);
+            font-family: 'Inter', sans-serif;
             font-weight: 400;
         }
 
@@ -107,42 +118,43 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #ddd;
+            color: var(--primary-light);
+            font-size: 1.2rem;
             font-weight: 600;
             transition: 0.2s;
         }
 
         .nav-links a:hover {
-            color: var(--gold);
-            text-shadow: 0 0 5px var(--gold);
+            color: var(--accent-orange);
+            text-shadow: 0 0 5px var(--accent-orange);
         }
 
         .btn-outline-gold {
-            border: 1px solid var(--gold);
+            border: 1px solid var(--accent-orange);
             background: transparent;
-            padding: 8px 20px;
+            padding: 6px 20px;
             border-radius: 40px;
-            color: var(--gold);
+            color: var(--accent-orange);
             font-weight: bold;
             transition: 0.2s;
         }
 
         .btn-outline-gold:hover {
-            background: var(--gold);
-            color: #000;
-            box-shadow: var(--gold-glow);
+            background: var(--accent-orange);
+            color: var(--bg-dark);
+            box-shadow: var(--accent-glow);
         }
 
         .mobile-menu {
             display: none;
-            font-size: 1.6rem;
-            color: var(--gold);
+            font-size: 1.8rem;
+            color: var(--accent-orange);
             cursor: pointer;
         }
 
         /* hero */
         .hero {
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,15 +163,15 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
-            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 900;
-            line-height: 1.2;
+            line-height: 1.1;
+            color: var(--white-smoke);
         }
 
-        .gold-text {
-            color: var(--gold);
-            text-shadow: var(--gold-glow);
+        .accent-text {
+            color: var(--accent-orange);
+            text-shadow: var(--accent-glow);
         }
 
         .hero-buttons {
@@ -171,26 +183,30 @@
         }
 
         .btn-gold {
-            background: linear-gradient(95deg, var(--gold-dark), var(--gold));
+            background: linear-gradient(95deg, #ea940c, #f5b041);
             padding: 12px 32px;
             border-radius: 60px;
             font-weight: 800;
             text-decoration: none;
-            color: #0a0a0a;
+            color: #1f0104;
             display: inline-flex;
             align-items: center;
             gap: 10px;
             transition: 0.2s;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
         }
 
         .btn-dark {
             background: rgba(255,255,255,0.05);
-            border: 1px solid var(--gold);
+            border: 1px solid var(--accent-orange);
             padding: 12px 32px;
             border-radius: 60px;
-            color: var(--gold);
+            color: var(--accent-orange);
             font-weight: 700;
             text-decoration: none;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
         }
 
         /* sections */
@@ -202,10 +218,10 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 3rem;
             margin-bottom: 3rem;
-            font-family: 'Orbitron', monospace;
+            color: var(--accent-orange);
+            letter-spacing: 2px;
         }
 
         /* partners grid */
@@ -223,51 +239,50 @@
             text-align: center;
             border: 1px solid var(--border-dim);
             transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
         }
 
         .partner-card:hover {
             transform: translateY(-8px);
-            border-color: var(--gold);
+            border-color: var(--accent-orange);
             box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
         .partner-logo {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #1E1E2A, #0A0A0F);
+            background: linear-gradient(135deg, #2c070b, #1f0104);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 2.8rem;
-            color: var(--gold);
-            border: 1px solid var(--gold);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
         }
 
         .partner-name {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 800;
             margin-bottom: 10px;
-            font-family: 'Orbitron', monospace;
+            color: var(--primary-light);
         }
 
         .partner-link {
             display: inline-block;
             margin-top: 15px;
-            background: rgba(255, 217, 102, 0.1);
+            background: rgba(234, 148, 12, 0.15);
             padding: 10px 25px;
             border-radius: 40px;
             text-decoration: none;
-            color: var(--gold);
+            color: var(--accent-orange);
             font-weight: 600;
             transition: 0.2s;
         }
 
         .partner-link:hover {
-            background: var(--gold);
-            color: #000;
+            background: var(--accent-orange);
+            color: #1f0104;
         }
 
         /* odds grid */
@@ -286,32 +301,34 @@
         }
 
         .match-card:hover {
-            border-color: var(--gold);
+            border-color: var(--accent-orange);
             transform: translateY(-6px);
         }
 
         .match-teams {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             font-weight: 800;
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            font-family: 'Bebas Neue', cursive;
+            color: var(--primary-light);
         }
 
         .odds-row {
             display: flex;
             justify-content: space-between;
             margin: 16px 0;
-            background: #0F0F17;
+            background: #1f0104;
             padding: 12px;
             border-radius: 20px;
         }
 
         .odd-btn {
-            background: #1E1E2A;
+            background: #2c070b;
             padding: 8px 20px;
             border-radius: 40px;
-            color: var(--gold);
+            color: var(--accent-orange);
             font-weight: bold;
             cursor: pointer;
             transition: 0.1s;
@@ -320,13 +337,13 @@
         }
 
         .odd-btn:hover {
-            background: var(--gold);
-            color: black;
+            background: var(--accent-orange);
+            color: #1f0104;
             transform: scale(1.02);
         }
 
         .bet-slip {
-            background: #0C0C12;
+            background: #0f0103;
             border-radius: 32px;
             padding: 30px;
             margin-top: 50px;
@@ -343,8 +360,8 @@
         }
 
         .slip-input input {
-            background: #1E1E2A;
-            border: none;
+            background: #1f0104;
+            border: 1px solid var(--accent-orange);
             padding: 14px 20px;
             border-radius: 60px;
             color: white;
@@ -370,7 +387,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--gold);
+            color: var(--accent-orange);
         }
 
         .features-grid {
@@ -381,23 +398,23 @@
         }
 
         .feature {
-            background: rgba(255,255,255,0.02);
+            background: rgba(44, 7, 11, 0.7);
             padding: 32px 20px;
             border-radius: 32px;
             text-align: center;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,217,102,0.1);
+            border: 1px solid var(--border-dim);
         }
 
         .feature i {
             font-size: 2.8rem;
-            color: var(--gold);
+            color: var(--accent-orange);
             margin-bottom: 20px;
         }
 
         .winner-table {
             width: 100%;
-            background: #0E0E16;
+            background: #0f0103;
             border-radius: 28px;
             overflow: hidden;
             border-collapse: collapse;
@@ -406,15 +423,15 @@
         .winner-table th, .winner-table td {
             padding: 16px;
             text-align: left;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #2c070b;
         }
 
         .winner-table th {
-            color: var(--gold);
+            color: var(--accent-orange);
         }
 
         .live-score-widget {
-            background: #0C0C12;
+            background: #0f0103;
             border-radius: 32px;
             padding: 20px;
             margin-bottom: 50px;
@@ -431,7 +448,7 @@
         }
 
         .match-info {
-            background: #1E1E2A;
+            background: #2c070b;
             padding: 10px 20px;
             border-radius: 40px;
             font-weight: bold;
@@ -446,32 +463,28 @@
             gap: 20px;
         }
 
-        .team-score {
-            flex: 1;
-        }
-
         .team-name {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 800;
+            color: var(--primary-light);
         }
 
         .runs {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--gold);
+            color: var(--accent-orange);
         }
 
         .status-badge {
-            background: #D4AF37;
-            color: #000;
+            background: var(--accent-orange);
+            color: #1f0104;
             padding: 5px 15px;
             border-radius: 30px;
             font-weight: bold;
-            display: inline-block;
         }
 
         footer {
-            background: #030308;
+            background: #0a0102;
             padding: 60px 30px 30px;
             border-top: 1px solid var(--border-dim);
             margin-top: 60px;
@@ -485,20 +498,62 @@
         }
 
         .social-icons a {
-            color: #aaa;
+            color: var(--primary-light);
             font-size: 1.8rem;
             margin-right: 20px;
             transition: 0.2s;
         }
 
         .social-icons a:hover {
-            color: var(--gold);
+            color: var(--accent-orange);
         }
 
-        .floating-chat {
+        /* WhatsApp Popup Styles */
+        .whatsapp-popup {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        .popup-bubble {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            animation: fadeInUp 0.5s ease;
+        }
+        .popup-bubble i {
+            font-size: 1.4rem;
+        }
+        .popup-bubble:hover {
+            transform: scale(1.02);
+            background: #20b859;
+        }
+        .close-popup {
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .whatsapp-icon {
             background: #25D366;
             width: 60px;
             height: 60px;
@@ -509,9 +564,22 @@
             font-size: 32px;
             color: white;
             box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-            z-index: 99;
+            cursor: pointer;
+            transition: 0.2s;
         }
-
+        .whatsapp-icon:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         @media (max-width: 800px) {
             .nav-links {
                 display: none;
@@ -519,7 +587,7 @@
                 top: 70px;
                 left: 0;
                 width: 100%;
-                background: #0a0a0f;
+                background: #1f0104;
                 flex-direction: column;
                 text-align: center;
                 padding: 30px;
@@ -535,6 +603,13 @@
             .section {
                 padding: 50px 20px;
             }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .popup-bubble {
+                font-size: 0.75rem;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
@@ -546,7 +621,9 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">IYER JI ONLINE BOOK <span>| since 2006</span></div>
+        <div class="logo">
+            <i class="fas fa-crown"></i> IYER JI <span>| since 2006</span>
+        </div>
         <div class="mobile-menu" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
@@ -562,9 +639,9 @@
 
 <section id="home" class="hero">
     <div>
-        <p style="letter-spacing: 3px; color: var(--gold);"><i class="fas fa-crown"></i> INDIA'S MOST TRUSTED PLATFORM</p>
-        <h1>IYER JI <span class="gold-text">ONLINE BOOK</span></h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto;">Highest odds | Instant cashout | 24/7 support</p>
+        <p style="letter-spacing: 3px; color: var(--accent-orange); font-weight: 700;"><i class="fas fa-crown"></i> INDIA'S MOST TRUSTED PLATFORM</p>
+        <h1>IYER JI <span class="accent-text">ONLINE BOOK</span></h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto; color: var(--primary-light);">Highest odds | Instant cashout | 24/7 support</p>
         <div class="hero-buttons">
             <a href="https://wa.me/447476956299" class="btn-gold"><i class="fab fa-whatsapp"></i> BET NOW ON WHATSAPP</a>
             <a href="#odds" class="btn-dark"><i class="fas fa-chart-line"></i> LIVE MATCHES</a>
@@ -584,8 +661,8 @@
 
 <!-- LIVE IPL SCORE SECTION -->
 <section id="live-ipl" class="section">
-    <h2 class="section-title"><span class="gold-text">🏏 LIVE IPL 2025 SCORES 🏏</span></h2>
-    <div class="live-score-widget" id="liveScoreWidget">
+    <h2 class="section-title">🏏 LIVE IPL 2025 SCORES 🏏</h2>
+    <div class="live-score-widget">
         <div class="live-score-header">
             <div class="match-info">🏆 INDIAN PREMIER LEAGUE 2025</div>
             <div class="status-badge" id="matchStatus">LIVE</div>
@@ -607,14 +684,14 @@
             <div class="update-time" id="updateTime">Last updated: Just now</div>
         </div>
         <div style="text-align: center; margin-top: 15px; font-size: 0.8rem;">
-            <i class="fas fa-info-circle"></i> Live scores update automatically. For video streaming, please check official broadcaster.
+            <i class="fas fa-info-circle"></i> Live scores update automatically. For video streaming, check official broadcaster.
         </div>
     </div>
 </section>
 
 <!-- LIVE ODDS SECTION -->
 <section id="odds" class="section">
-    <h2 class="section-title"><span class="gold-text">🔥 LIVE BETTING ODDS 🔥</span></h2>
+    <h2 class="section-title">🔥 LIVE BETTING ODDS 🔥</h2>
     <div class="odds-grid">
         <div class="match-card">
             <div class="match-teams"><span>MI</span> <span>VS</span> <span>CSK</span></div>
@@ -644,45 +721,25 @@
             <input type="number" id="betAmount" placeholder="Amount (₹)" value="1000">
             <button id="placeBetBtn" class="btn-gold" style="border: none;">📞 SEND TO WHATSAPP</button>
         </div>
-        <p id="betFeedback" style="font-size: 0.9rem; color: var(--gold);"></p>
+        <p id="betFeedback" style="font-size: 0.9rem; color: var(--accent-orange);"></p>
         <small>*Demo interaction — Real bets placed via WhatsApp/Telegram</small>
     </div>
 </section>
 
-<!-- PARTNERS SECTION (Clients with logos & links) -->
+<!-- PARTNERS SECTION -->
 <section id="partners" class="section">
-    <h2 class="section-title"><span class="gold-text">🤝 OUR PREMIUM PARTNERS 🤝</span></h2>
+    <h2 class="section-title">🤝 OUR PREMIUM PARTNERS 🤝</h2>
     <div class="partners-grid">
-        <div class="partner-card">
-            <div class="partner-logo"><i class="fas fa-crown"></i></div>
-            <div class="partner-name">IYERJI.WIN</div>
-            <p>Official Iyer Ji Platform</p>
-            <a href="https://iyerji.win" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
-        </div>
-        <div class="partner-card">
-            <div class="partner-logo"><i class="fas fa-exchange-alt"></i></div>
-            <div class="partner-name">99EXCHS.LIVE</div>
-            <p>High Odds Exchange</p>
-            <a href="https://99exchs.live" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
-        </div>
-        <div class="partner-card">
-            <div class="partner-logo"><i class="fas fa-gamepad"></i></div>
-            <div class="partner-name">11XPLAYS.GAMES</div>
-            <p>Casino & Sports Games</p>
-            <a href="https://11xplays.games" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
-        </div>
-        <div class="partner-card">
-            <div class="partner-logo"><i class="fas fa-laser-focus"></i></div>
-            <div class="partner-name">LASER247S.CLUB</div>
-            <p>Live Anytime Anywhere</p>
-            <a href="https://laser247s.club" target="_blank" class="partner-link" rel="noopener noreferrer">Visit Site →</a>
-        </div>
+        <div class="partner-card"><div class="partner-logo"><i class="fas fa-crown"></i></div><div class="partner-name">IYERJI.WIN</div><p>Official Iyer Ji Platform</p><a href="https://iyerji.win" target="_blank" class="partner-link">Visit Site →</a></div>
+        <div class="partner-card"><div class="partner-logo"><i class="fas fa-exchange-alt"></i></div><div class="partner-name">99EXCHS.LIVE</div><p>High Odds Exchange</p><a href="https://99exchs.live" target="_blank" class="partner-link">Visit Site →</a></div>
+        <div class="partner-card"><div class="partner-logo"><i class="fas fa-gamepad"></i></div><div class="partner-name">11XPLAYS.GAMES</div><p>Casino & Sports Games</p><a href="https://11xplays.games" target="_blank" class="partner-link">Visit Site →</a></div>
+        <div class="partner-card"><div class="partner-logo"><i class="fas fa-laser-focus"></i></div><div class="partner-name">LASER247S.CLUB</div><p>Live Anytime Anywhere</p><a href="https://laser247s.club" target="_blank" class="partner-link">Visit Site →</a></div>
     </div>
 </section>
 
-<!-- Features / Why Choose Us -->
+<!-- Features -->
 <section id="features" class="section">
-    <h2 class="section-title">ELITE <span class="gold-text">PRIVILEGES</span></h2>
+    <h2 class="section-title">ELITE PRIVILEGES</h2>
     <div class="features-grid">
         <div class="feature"><i class="fas fa-bolt"></i><h3>Lightning Payouts</h3><p>Average withdrawal under 3 minutes — zero delays.</p></div>
         <div class="feature"><i class="fas fa-headset"></i><h3>24/7 Concierge</h3><p>Personal assistant for every VIP member.</p></div>
@@ -709,75 +766,58 @@
 
 <!-- Contact Section -->
 <section id="contact" class="section">
-    <h2 class="section-title">GET IN TOUCH WITH <span class="gold-text">IYER JI TEAM</span></h2>
+    <h2 class="section-title">GET IN TOUCH WITH IYER JI TEAM</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-        <div style="background: #12121A; padding: 30px; border-radius: 32px; min-width: 260px;">
+        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
             <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i>
             <h3>WhatsApp Betting</h3>
             <p>Send "BET" to +44 7476 956299</p>
             <a href="https://wa.me/447476956299" class="btn-gold" style="margin-top: 15px; display: inline-block;">Chat Now</a>
         </div>
-        <div style="background: #12121A; padding: 30px; border-radius: 32px; min-width: 260px;">
+        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
             <i class="fab fa-telegram" style="font-size: 2.5rem; color: #0088cc;"></i>
             <h3>Telegram Channel</h3>
             <p>Get daily tips & exclusive odds</p>
             <a href="https://t.me/iyerjionlinebook" class="btn-gold" style="margin-top: 15px; display: inline-block;">Join Now</a>
         </div>
-        <div style="background: #12121A; padding: 30px; border-radius: 32px; min-width: 260px;">
+        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
             <i class="fab fa-instagram" style="font-size: 2.5rem; color: #E4405F;"></i>
             <h3>Instagram</h3>
             <p>Follow for winner shoutouts</p>
             <a href="https://instagram.com/iyerjionlinebook" class="btn-gold" style="margin-top: 15px; display: inline-block;">Follow</a>
         </div>
     </div>
-    <div style="margin-top: 50px; background: #0E0E16; border-radius: 32px; padding: 30px; text-align: center;">
-        <p style="font-size: 1.2rem;">📞 CUSTOMER SUPPORT: 24x7 | For any query, DM on WhatsApp / Telegram for instant resolution.</p>
+    <div style="margin-top: 50px; background: #0f0103; border-radius: 32px; padding: 30px; text-align: center;">
+        <p style="font-size: 1.2rem;">📞 CUSTOMER SUPPORT: 24x7 | DM on WhatsApp / Telegram for instant resolution.</p>
         <p style="margin-top: 15px;">📍 Licensed under Curacao Gaming | Responsible gaming 18+</p>
     </div>
 </section>
 
 <footer>
     <div class="footer-flex">
-        <div>
-            <div class="logo" style="font-size: 1.8rem;">IYER JI ONLINE BOOK</div>
-            <p style="margin-top: 15px;">India's most innovative betting platform.<br>Secure • Fast • Premium</p>
-        </div>
-        <div>
-            <h4 style="color: var(--gold);">Quick Links</h4>
-            <ul style="list-style: none; margin-top: 10px;">
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Responsible Gaming</li>
-                <li>Affiliate Program</li>
-            </ul>
-        </div>
-        <div>
-            <h4 style="color: var(--gold);">Connect</h4>
-            <div class="social-icons">
-                <a href="https://wa.me/447476956299"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://t.me/iyerjionlinebook"><i class="fab fa-telegram"></i></a>
-                <a href="https://instagram.com/iyerjionlinebook"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p style="margin-top: 20px;">© 2026 Iyer Ji Online Book. All rights reserved.</p>
-        </div>
+        <div><div class="logo" style="font-size: 1.8rem;"><i class="fas fa-crown"></i> IYER JI ONLINE BOOK</div><p style="margin-top: 15px;">India's most innovative betting platform.<br>Secure • Fast • Premium</p></div>
+        <div><h4 style="color: var(--accent-orange);">Quick Links</h4><ul style="list-style: none; margin-top: 10px;"><li>Terms & Conditions</li><li>Privacy Policy</li><li>Responsible Gaming</li><li>Affiliate Program</li></ul></div>
+        <div><h4 style="color: var(--accent-orange);">Connect</h4><div class="social-icons"><a href="https://wa.me/447476956299"><i class="fab fa-whatsapp"></i></a><a href="https://t.me/iyerjionlinebook"><i class="fab fa-telegram"></i></a><a href="https://instagram.com/iyerjionlinebook"><i class="fab fa-instagram"></i></a></div><p style="margin-top: 20px;">© 2026 Iyer Ji Online Book</p></div>
     </div>
 </footer>
 
-<a href="https://wa.me/447476956299" class="floating-chat" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- WHATSAPP POPUP (floating + bubble) -->
+<div class="whatsapp-popup">
+    <div id="whatsappBubble" class="popup-bubble" style="display: flex;">
+        <i class="fab fa-whatsapp"></i> Need help? Chat with us!
+        <span class="close-popup" id="closeBubble">✕</span>
+    </div>
+    <div class="whatsapp-icon" id="whatsappIcon">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</div>
 
 <script>
     // mobile menu toggle
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
-    mobileBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('show');
-        });
-    });
+    mobileBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('show')));
 
     // smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -785,10 +825,7 @@
             const href = this.getAttribute('href');
             if(href === "#") return;
             const target = document.querySelector(href);
-            if(target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
+            if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
         });
     });
 
@@ -797,111 +834,80 @@
     const placeBtn = document.getElementById('placeBetBtn');
     const betFeedbackSpan = document.getElementById('betFeedback');
     let currentSelection = "";
-
     document.querySelectorAll('.odd-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const match = btn.getAttribute('data-match');
             const team = btn.getAttribute('data-team');
-            let label = "";
-            if(match && team) label = `${match} - ${team} win @ ${btn.innerText}`;
-            else label = btn.innerText + " odds";
+            let label = (match && team) ? `${match} - ${team} win @ ${btn.innerText}` : btn.innerText + " odds";
             currentSelection = label;
             betInput.value = currentSelection;
             betFeedbackSpan.innerHTML = "✅ Selected: " + currentSelection;
         });
     });
-
     placeBtn.addEventListener('click', () => {
         const amount = document.getElementById('betAmount').value;
-        if(!currentSelection && !betInput.value) {
-            betFeedbackSpan.innerHTML = "⚠️ Please select an odd from the matches first!";
-            return;
-        }
+        if(!currentSelection && !betInput.value) { betFeedbackSpan.innerHTML = "⚠️ Please select an odd first!"; return; }
         const selected = currentSelection || betInput.value;
-        if(!amount || amount <= 0) {
-            betFeedbackSpan.innerHTML = "⚠️ Enter valid bet amount";
-            return;
-        }
-        const whatsappMsg = `*New Bet Request*%0A*Selection:* ${selected}%0A*Amount:* ₹${amount}%0A*User:* Iyer Ji Online Book Player`;
-        const waLink = `https://wa.me/447476956299?text=${whatsappMsg}`;
-        window.open(waLink, '_blank');
-        betFeedbackSpan.innerHTML = `📤 Redirecting to WhatsApp with bet of ₹${amount} on ${selected}. Share your ID to confirm.`;
-        setTimeout(() => {
-            betFeedbackSpan.innerHTML = "";
-        }, 4000);
+        if(!amount || amount <= 0) { betFeedbackSpan.innerHTML = "⚠️ Enter valid bet amount"; return; }
+        const whatsappMsg = `*New Bet Request*%0A*Selection:* ${selected}%0A*Amount:* ₹${amount}%0A*User:* Iyer Ji Player`;
+        window.open(`https://wa.me/447476956299?text=${whatsappMsg}`, '_blank');
+        betFeedbackSpan.innerHTML = `📤 Redirecting to WhatsApp with ₹${amount} on ${selected}.`;
+        setTimeout(() => betFeedbackSpan.innerHTML = "", 4000);
     });
 
     // animated member count
     const memberSpan = document.getElementById('memberCount');
     if(memberSpan) {
-        let count = 0;
-        const target = 15780;
+        let count = 0, target = 15780;
         const update = setInterval(() => {
-            if(count < target) {
-                count += Math.ceil(target / 55);
-                if(count > target) count = target;
-                memberSpan.innerText = count.toLocaleString() + "+";
-            } else clearInterval(update);
+            if(count < target) { count += Math.ceil(target / 55); if(count > target) count = target; memberSpan.innerText = count.toLocaleString() + "+"; }
+            else clearInterval(update);
         }, 35);
     }
 
     // LIVE IPL SCORE SIMULATION
     let scoreInterval;
-    let isLive = true;
-    const team1NameElem = document.getElementById('team1Name');
-    const team2NameElem = document.getElementById('team2Name');
-    const team1ScoreElem = document.getElementById('team1Score');
-    const team2ScoreElem = document.getElementById('team2Score');
-    const team1OversElem = document.getElementById('team1Overs');
-    const team2OversElem = document.getElementById('team2Overs');
+    const team1NameElem = document.getElementById('team1Name'), team2NameElem = document.getElementById('team2Name');
+    const team1ScoreElem = document.getElementById('team1Score'), team2ScoreElem = document.getElementById('team2Score');
+    const team1OversElem = document.getElementById('team1Overs'), team2OversElem = document.getElementById('team2Overs');
     const updateTimeElem = document.getElementById('updateTime');
-
     const matches = [
-        { team1: "Mumbai Indians", team2: "Chennai Super Kings", score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" },
-        { team1: "Royal Challengers B", team2: "Rajasthan Royals", score1: "210/5", overs1: "(20.0)", score2: "180/7", overs2: "(18.3)" },
-        { team1: "Kolkata Knight Riders", team2: "Delhi Capitals", score1: "165/8", overs1: "(19.1)", score2: "140/5", overs2: "(16.0)" },
-        { team1: "Sunrisers Hyderabad", team2: "Punjab Kings", score1: "195/3", overs1: "(18.5)", score2: "150/6", overs2: "(17.2)" }
+        { team1: "Mumbai Indians", team2: "Chennai Super Kings" }, { team1: "Royal Challengers B", team2: "Rajasthan Royals" },
+        { team1: "Kolkata Knight Riders", team2: "Delhi Capitals" }, { team1: "Sunrisers Hyderabad", team2: "Punjab Kings" }
     ];
-
     const scoreUpdates = [
-        { score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" },
-        { score1: "189/4", overs1: "(19.0)", score2: "125/3", overs2: "(15.0)" },
-        { score1: "192/5", overs1: "(19.4)", score2: "130/4", overs2: "(16.0)" },
-        { score1: "195/5", overs1: "(20.0)", score2: "135/4", overs2: "(17.0)" },
-        { score1: "195/5", overs1: "(20.0)", score2: "140/5", overs2: "(18.0)" },
-        { score1: "195/5", overs1: "(20.0)", score2: "145/5", overs2: "(19.0)" },
+        { score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" }, { score1: "189/4", overs1: "(19.0)", score2: "125/3", overs2: "(15.0)" },
+        { score1: "192/5", overs1: "(19.4)", score2: "130/4", overs2: "(16.0)" }, { score1: "195/5", overs1: "(20.0)", score2: "135/4", overs2: "(17.0)" },
+        { score1: "195/5", overs1: "(20.0)", score2: "140/5", overs2: "(18.0)" }, { score1: "195/5", overs1: "(20.0)", score2: "145/5", overs2: "(19.0)" },
         { score1: "195/5", overs1: "(20.0)", score2: "150/6", overs2: "(20.0)" }
     ];
-
-    let matchIndex = 0;
-    let scoreIndex = 0;
-
+    let matchIndex = 0, scoreIndex = 0;
     function updateLiveScore() {
-        if (!isLive) return;
         const currentMatch = matches[matchIndex];
         const currentUpdate = scoreUpdates[scoreIndex % scoreUpdates.length];
-        team1NameElem.innerText = currentMatch.team1;
-        team2NameElem.innerText = currentMatch.team2;
-        team1ScoreElem.innerText = currentUpdate.score1;
-        team1OversElem.innerText = currentUpdate.overs1;
-        team2ScoreElem.innerText = currentUpdate.score2;
-        team2OversElem.innerText = currentUpdate.overs2;
-        const now = new Date();
-        updateTimeElem.innerText = `Last updated: ${now.toLocaleTimeString()}`;
+        team1NameElem.innerText = currentMatch.team1; team2NameElem.innerText = currentMatch.team2;
+        team1ScoreElem.innerText = currentUpdate.score1; team1OversElem.innerText = currentUpdate.overs1;
+        team2ScoreElem.innerText = currentUpdate.score2; team2OversElem.innerText = currentUpdate.overs2;
+        updateTimeElem.innerText = `Last updated: ${new Date().toLocaleTimeString()}`;
         scoreIndex++;
-        if (scoreIndex % 10 === 0) {
-            matchIndex = (matchIndex + 1) % matches.length;
-        }
+        if (scoreIndex % 10 === 0) matchIndex = (matchIndex + 1) % matches.length;
     }
+    if (team1NameElem) { updateLiveScore(); scoreInterval = setInterval(updateLiveScore, 5000); }
+    window.addEventListener('beforeunload', () => { if (scoreInterval) clearInterval(scoreInterval); });
 
-    if (team1NameElem) {
-        updateLiveScore();
-        scoreInterval = setInterval(updateLiveScore, 5000);
+    // WhatsApp Popup Logic
+    const bubble = document.getElementById('whatsappBubble');
+    const closeBubble = document.getElementById('closeBubble');
+    const whatsappIcon = document.getElementById('whatsappIcon');
+    const waNumber = '447476956299';
+    function openWhatsApp() { window.open(`https://wa.me/${waNumber}`, '_blank'); }
+    whatsappIcon.addEventListener('click', openWhatsApp);
+    if (bubble) {
+        closeBubble.addEventListener('click', (e) => { e.stopPropagation(); bubble.style.display = 'none'; });
+        bubble.addEventListener('click', openWhatsApp);
+        // auto hide after 8 seconds
+        setTimeout(() => { if (bubble) bubble.style.display = 'none'; }, 8000);
     }
-
-    window.addEventListener('beforeunload', () => {
-        if (scoreInterval) clearInterval(scoreInterval);
-    });
 </script>
 </body>
 </html>
