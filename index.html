@@ -1,919 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>IYER JI ONLINE BOOK | India's #1 Betting Exchange Since 2006</title>
-    <meta name="description" content="IYER JI ONLINE BOOK - India's most trusted betting platform since 2006. Live odds, instant withdrawals, VIP perks.">
-    
-    <!-- Google Fonts + Font Awesome (with fallback) -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NFPL8H2C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GT-NFPL8H2C');
+  </script>
 
-        /* COLOR SCHEME - fully inline */
-        :root {
-            --bg-dark: #1f0104;
-            --bg-card: #2c070b;
-            --primary-light: #c8d7f6;
-            --white-smoke: #f8f9fa;
-            --gray-mid: #b9bdc7;
-            --accent-orange: #ea940c;
-            --accent-glow: 0 0 15px rgba(234, 148, 12, 0.5);
-            --border-dim: rgba(200, 215, 246, 0.15);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
-            color: var(--white-smoke);
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
+  <!-- ================= SEO TAGS (ADDED BY AI) ================= -->
+  <!-- Search Engine Indexing Allowed -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  
+  <title>Iyer Ji Online | Best Cricket Casino & Betting ID in India</title>
+  <meta name="description" content="Get your official Iyer Ji Online cricket betting ID. Enjoy premium live casino games, fast 5-minute withdrawals, 12% welcome bonus, and 24/7 customer support. India's No.1 trusted platform.">
+  <meta name="keywords" content="Iyer Ji online, cricket betting ID, online casino India, live cricket betting, Iyer Ji book, fast withdrawal betting site, IPL betting ID">
+  <meta name="author" content="Iyer Ji">
+  
+  <link rel="canonical" href="https://iyerji.online/">
 
-        h1, h2, h3, .logo, .partner-name, .team-name, .section-title, .nav-links a, .btn-outline-gold {
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 1px;
-        }
+  <!-- Open Graph Tags (For WhatsApp, Telegram & Facebook Sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iyerji.online/">
+  <meta property="og:title" content="Iyer Ji Online | Get Premium Cricket Betting ID">
+  <meta property="og:description" content="Join India's most trusted betting platform since 2006. Get a 12% welcome bonus and 5-min fast withdrawals!">
+  <meta property="og:image" content="https://iyerji.online/Logo.png">
+  <!-- ========================================================== -->
 
-        .bg-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 30%, #2c0a0e 0%, #0f0103 100%);
-            z-index: -2;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-        .orb {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(234, 148, 12, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(100px);
-            animation: drift 25s infinite alternate;
-            z-index: -1;
-        }
+  <style>
+    * { font-family: 'Montserrat', sans-serif; }
+    body {
+      background-color: #020617;
+      background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, #020617 70%);
+      color: #ffffff;
+      min-height: 100vh;
+      user-select: none;
+      -webkit-user-select: none;
+    }
 
-        @keyframes drift {
-            0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-            100% { transform: translate(100px, 80px) scale(1.3); opacity: 0.7; }
-        }
+    /* Continuous Smooth Marquee for Top Banner */
+    .marquee-wrapper {
+      background: linear-gradient(90deg, #ea580c, #f97316, #ea580c);
+      color: #ffffff;
+      font-weight: 900;
+      padding: 10px 0;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    }
+    .marquee-content {
+      display: inline-block;
+      animation: marqueeText 20s linear infinite;
+    }
+    .marquee-content span { padding-right: 50px; }
+    @keyframes marqueeText {
+      0% { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
 
-        .navbar {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(31, 1, 4, 0.92);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-dim);
-            padding: 0.8rem 2rem;
-        }
+    /* 🔴 PREMIUM 2x2 GRID & SPINNING WHEEL 🔴 */
+    .platform-item {
+      position: relative;
+      width: 135px;
+      height: 135px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .platform-item:hover {
+      transform: scale(1.1) translateY(-5px);
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent-orange);
-            text-shadow: var(--accent-glow);
-        }
-        .logo i {
-            font-size: 2.2rem;
-            color: var(--accent-orange);
-        }
-        .logo span {
-            font-size: 1rem;
-            background: none;
-            color: var(--primary-light);
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-        }
+    .spinning-wheel-bg {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 3px dashed rgba(255, 255, 255, 0.6);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6), inset 0 0 15px rgba(0,0,0,0.5);
+      animation: spinWheel 6s linear infinite;
+      transition: all 0.3s ease;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+    .platform-item:hover .spinning-wheel-bg {
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 15px 30px rgba(255,255,255,0.4), inset 0 0 20px rgba(0,0,0,0.6);
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary-light);
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: 0.2s;
-        }
+    @keyframes spinWheel {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-        .nav-links a:hover {
-            color: var(--accent-orange);
-            text-shadow: 0 0 5px var(--accent-orange);
-        }
+    .platform-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .btn-outline-gold {
-            border: 1px solid var(--accent-orange);
-            background: transparent;
-            padding: 6px 20px;
-            border-radius: 40px;
-            color: var(--accent-orange);
-            font-weight: bold;
-            transition: 0.2s;
-        }
+    .platform-logo {
+      height: 45px; 
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 6px;
+      filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.8));
+      transition: transform 0.3s ease;
+    }
 
-        .btn-outline-gold:hover {
-            background: var(--accent-orange);
-            color: var(--bg-dark);
-            box-shadow: var(--accent-glow);
-        }
+    .platform-item:hover .platform-logo {
+      transform: scale(1.15);
+    }
 
-        .mobile-menu {
-            display: none;
-            font-size: 1.8rem;
-            color: var(--accent-orange);
-            cursor: pointer;
-        }
+    .platform-text {
+      font-size: 11px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
+    .btn-grad-1 { background: linear-gradient(135deg, #ff007f, #7928ca); }
+    .btn-grad-2 { background: linear-gradient(135deg, #007cf0, #00dfd8); }
+    .btn-grad-3 { background: linear-gradient(135deg, #f7b733, #fc4a1a); }
+    .btn-grad-4 { background: linear-gradient(135deg, #11998e, #38ef7d); }
 
-        .hero h1 {
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-weight: 900;
-            line-height: 1.1;
-            color: var(--white-smoke);
-        }
+    .premium-panel { 
+      background: rgba(30, 58, 138, 0.4); 
+      backdrop-filter: blur(12px); 
+      border: 1px solid rgba(255, 255, 255, 0.1); 
+      border-top: 3px solid #f97316; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
 
-        .accent-text {
-            color: var(--accent-orange);
-            text-shadow: var(--accent-glow);
-        }
+    .text-orange-grad { 
+      background: linear-gradient(to right, #ea580c, #fbd38d, #ea580c); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+    }
+  </style>
 
-        .hero-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-gold {
-            background: linear-gradient(95deg, #ea940c, #f5b041);
-            padding: 12px 32px;
-            border-radius: 60px;
-            font-weight: 800;
-            text-decoration: none;
-            color: #1f0104;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.2s;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.2rem;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-dark {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--accent-orange);
-            padding: 12px 32px;
-            border-radius: 60px;
-            color: var(--accent-orange);
-            font-weight: 700;
-            text-decoration: none;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.2rem;
-        }
-
-        .section {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 80px 24px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            color: var(--accent-orange);
-            letter-spacing: 2px;
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .partner-card {
-            background: var(--bg-card);
-            border-radius: 28px;
-            padding: 30px 20px;
-            text-align: center;
-            border: 1px solid var(--border-dim);
-            transition: all 0.3s ease;
-        }
-
-        .partner-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-orange);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-        }
-
-        .partner-logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #2c070b, #1f0104);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2.8rem;
-            color: var(--accent-orange);
-            border: 1px solid var(--accent-orange);
-        }
-
-        .partner-name {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--primary-light);
-        }
-
-        .partner-link {
-            display: inline-block;
-            margin-top: 15px;
-            background: rgba(234, 148, 12, 0.15);
-            padding: 10px 25px;
-            border-radius: 40px;
-            text-decoration: none;
-            color: var(--accent-orange);
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .partner-link:hover {
-            background: var(--accent-orange);
-            color: #1f0104;
-        }
-
-        .odds-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .match-card {
-            background: var(--bg-card);
-            border-radius: 28px;
-            padding: 24px;
-            border: 1px solid var(--border-dim);
-            transition: 0.25s;
-        }
-
-        .match-card:hover {
-            border-color: var(--accent-orange);
-            transform: translateY(-6px);
-        }
-
-        .match-teams {
-            font-size: 1.8rem;
-            font-weight: 800;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            font-family: 'Bebas Neue', cursive;
-            color: var(--primary-light);
-        }
-
-        .odds-row {
-            display: flex;
-            justify-content: space-between;
-            margin: 16px 0;
-            background: #1f0104;
-            padding: 12px;
-            border-radius: 20px;
-        }
-
-        .odd-btn {
-            background: #2c070b;
-            padding: 8px 20px;
-            border-radius: 40px;
-            color: var(--accent-orange);
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.1s;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .odd-btn:hover {
-            background: var(--accent-orange);
-            color: #1f0104;
-            transform: scale(1.02);
-        }
-
-        .bet-slip {
-            background: #0f0103;
-            border-radius: 32px;
-            padding: 30px;
-            margin-top: 50px;
-            border: 1px solid var(--border-dim);
-            text-align: center;
-        }
-
-        .slip-input {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .slip-input input {
-            background: #1f0104;
-            border: 1px solid var(--accent-orange);
-            padding: 14px 20px;
-            border-radius: 60px;
-            color: white;
-            width: 200px;
-        }
-
-        .stats-row {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .stat {
-            background: var(--bg-card);
-            padding: 20px 32px;
-            border-radius: 40px;
-            min-width: 160px;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-orange);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 28px;
-            margin-top: 30px;
-        }
-
-        .feature {
-            background: rgba(44, 7, 11, 0.7);
-            padding: 32px 20px;
-            border-radius: 32px;
-            text-align: center;
-            backdrop-filter: blur(4px);
-            border: 1px solid var(--border-dim);
-        }
-
-        .feature i {
-            font-size: 2.8rem;
-            color: var(--accent-orange);
-            margin-bottom: 20px;
-        }
-
-        .winner-table {
-            width: 100%;
-            background: #0f0103;
-            border-radius: 28px;
-            overflow: hidden;
-            border-collapse: collapse;
-        }
-
-        .winner-table th, .winner-table td {
-            padding: 16px;
-            text-align: left;
-            border-bottom: 1px solid #2c070b;
-        }
-
-        .winner-table th {
-            color: var(--accent-orange);
-        }
-
-        .live-score-widget {
-            background: #0f0103;
-            border-radius: 32px;
-            padding: 20px;
-            margin-bottom: 50px;
-            border: 1px solid var(--border-dim);
-        }
-
-        .live-score-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .match-info {
-            background: #2c070b;
-            padding: 10px 20px;
-            border-radius: 40px;
-            font-weight: bold;
-        }
-
-        .score-board {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin: 25px 0;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .team-name {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-light);
-        }
-
-        .runs {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-orange);
-        }
-
-        .status-badge {
-            background: var(--accent-orange);
-            color: #1f0104;
-            padding: 5px 15px;
-            border-radius: 30px;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #0a0102;
-            padding: 60px 30px 30px;
-            border-top: 1px solid var(--border-dim);
-            margin-top: 60px;
-        }
-
-        .footer-flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .social-icons a {
-            color: var(--primary-light);
-            font-size: 1.8rem;
-            margin-right: 20px;
-            transition: 0.2s;
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-orange);
-        }
-
-        .whatsapp-popup {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 12px;
-        }
-        .popup-bubble {
-            background: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: 0.2s;
-            animation: fadeInUp 0.5s ease;
-        }
-        .popup-bubble i {
-            font-size: 1.4rem;
-        }
-        .popup-bubble:hover {
-            transform: scale(1.02);
-            background: #20b859;
-        }
-        .close-popup {
-            background: rgba(0,0,0,0.5);
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            cursor: pointer;
-            margin-left: 8px;
-        }
-        .whatsapp-icon {
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .whatsapp-icon:hover {
-            transform: scale(1.05);
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @media (max-width: 800px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #1f0104;
-                flex-direction: column;
-                text-align: center;
-                padding: 30px;
-                gap: 20px;
-                backdrop-filter: blur(20px);
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .mobile-menu {
-                display: block;
-            }
-            .section {
-                padding: 50px 20px;
-            }
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .popup-bubble {
-                font-size: 0.75rem;
-                padding: 8px 15px;
-            }
-        }
-    </style>
+  <!-- Google SEO Schema Markup (Builds Trust in Search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Iyer Ji Online",
+    "url": "https://iyerji.online/",
+    "description": "Premium Official Portal for Cricket Casino and Betting."
+  }
+  </script>
 </head>
-<body>
 
-<div class="bg-glow"></div>
-<div class="orb" style="top: -150px; right: -100px;"></div>
-<div class="orb" style="bottom: -80px; left: -80px; animation-duration: 30s;"></div>
+<body oncontextmenu="return false;">
 
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <i class="fas fa-crown"></i> IYER JI <span>| since 2006</span>
-        </div>
-        <div class="mobile-menu" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#odds">Live Odds</a></li>
-            <li><a href="#features">Perks</a></li>
-            <li><a href="#winners">Winners</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" class="btn-outline-gold">VIP Login</a></li>
-        </ul>
+  <div id="secure-content" style="display: block;"> <!-- Made display block since bot blocker is removed -->
+
+    <!-- CONTINUOUS MARQUEE -->
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <span>🏆 WELCOME TO IYER JI ONLINE BOOK 🏆 GET 12% WELCOME BONUS ON NEW ID ⚡ SUPERFAST 5-MIN WITHDRAWAL ⚡ INDIA'S NO.1 TRUSTED PLATFORM SINCE 2006!</span>
+      </div>
     </div>
-</nav>
 
-<section id="home" class="hero">
-    <div>
-        <p style="letter-spacing: 3px; color: var(--accent-orange); font-weight: 700;"><i class="fas fa-crown"></i> INDIA'S MOST TRUSTED PLATFORM</p>
-        <h1>IYER JI <span class="accent-text">ONLINE BOOK</span></h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto; color: var(--primary-light);">Highest odds | Instant cashout | 24/7 support</p>
-        <div class="hero-buttons">
-            <a href="https://wa.me/447476956299" class="btn-gold"><i class="fab fa-whatsapp"></i> BET NOW ON WHATSAPP</a>
-            <a href="#odds" class="btn-dark"><i class="fas fa-chart-line"></i> LIVE MATCHES</a>
+    <!-- 🔴 NAVBAR 🔴 -->
+    <nav class="bg-[#020617]/95 backdrop-blur-md sticky top-0 z-50 border-b border-[#1e3a8a] py-3">
+      <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="Logo.png" alt="IYER JI Logo - Premium Cricket ID" class="h-16 sm:h-20 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
         </div>
-    </div>
-</section>
-
-<div class="section" style="padding-top: 0;">
-    <div class="stats-row">
-        <div class="stat"><div class="stat-number" id="memberCount">15K+</div><div>Active Users</div></div>
-        <div class="stat"><div class="stat-number">₹210Cr+</div><div>Monthly Handle</div></div>
-        <div class="stat"><div class="stat-number">< 3min</div><div>Withdrawals</div></div>
-        <div class="stat"><div class="stat-number">99.7%</div><div>Payout Rate</div></div>
-    </div>
-</div>
-
-<section id="live-ipl" class="section">
-    <h2 class="section-title">🏏 LIVE IPL 2025 SCORES 🏏</h2>
-    <div class="live-score-widget">
-        <div class="live-score-header">
-            <div class="match-info">🏆 INDIAN PREMIER LEAGUE 2025</div>
-            <div class="status-badge" id="matchStatus">LIVE</div>
+        <div class="flex items-center gap-3">
+          <a href="https://t.me/iyerjionlinebook" target="_blank" rel="noopener noreferrer" class="bg-[#0088cc] hover:bg-[#0077b5] text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-full font-bold shadow-[0_0_15px_rgba(0,136,204,0.4)] transition-all flex items-center gap-2 text-sm sm:text-base">
+            <i class="fab fa-telegram text-xl"></i> <span class="hidden sm:inline">TELEGRAM</span>
+          </a>
+          <a href="https://wa.me/918458956033?text=I%20want%20New%20ID" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-full font-bold shadow-[0_0_15px_rgba(37,211,102,0.4)] transition-all flex items-center gap-2 text-sm sm:text-base">
+            <i class="fab fa-whatsapp text-xl"></i> <span class="hidden sm:inline">WHATSAPP</span>
+          </a>
         </div>
-        <div id="liveScoreContent">
-            <div class="score-board">
-                <div class="team-score">
-                    <div class="team-name" id="team1Name">Mumbai Indians</div>
-                    <div class="runs" id="team1Score">185/4</div>
-                    <div class="overs" id="team1Overs">(18.2)</div>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <div class="team-name" id="team2Name">Chennai Super Kings</div>
-                    <div class="runs" id="team2Score">120/3</div>
-                    <div class="overs" id="team2Overs">(14.0)</div>
-                </div>
+      </div>
+    </nav>
+
+    <!-- GLOBAL TRUST METRICS -->
+    <section class="pt-8 pb-4 px-5">
+      <div class="max-w-4xl mx-auto bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#0f172a] border border-[#f97316]/30 rounded-2xl p-4 flex flex-col sm:flex-row justify-around items-center gap-4 shadow-2xl">
+        <div class="flex items-center gap-3">
+          <i class="fas fa-globe-americas text-4xl text-white"></i>
+          <div>
+            <h1 class="text-2xl font-black text-white">350+</h1> <!-- Changed to H1 for SEO -->
+            <p class="text-xs text-orange-400 font-bold uppercase tracking-widest">Branches Worldwide</p>
+          </div>
+        </div>
+        <div class="w-px h-12 bg-[#1e3a8a] hidden sm:block"></div>
+        <div class="flex items-center gap-3">
+          <i class="fas fa-users text-4xl text-[#f97316]"></i>
+          <div>
+            <h2 class="text-2xl font-black text-white">2 Lakh+</h2>
+            <p class="text-xs text-orange-400 font-bold uppercase tracking-widest">Client Family</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌟 2x2 GRID PLATFORMS WITH SPINNING WHEEL 🌟 -->
+    <section class="py-12 px-5">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-black mb-2 text-orange-grad uppercase tracking-widest"><i class="fas fa-gem mr-2"></i> Select Premium Platform</h2>
+        <p class="text-gray-300 mb-10 text-sm font-semibold">Choose your trusted platform to play online casino and cricket betting.</p> <!-- Text optimized -->
+
+        <!-- Grid layout: 2 columns -->
+        <div class="grid grid-cols-2 gap-8 md:gap-12 max-w-sm mx-auto place-items-center">
+
+          <!-- PLATFORM 1 -->
+          <a href="https://iyerji.win" target="_blank" rel="noopener noreferrer" class="platform-item group">
+            <div class="spinning-wheel-bg btn-grad-1"></div>
+            <div class="platform-content">
+              <img src="iyerji-logo.png" alt="Iyerji Win Platform" class="platform-logo">
+              <span class="platform-text">IYERJI.WIN</span>
             </div>
-            <div class="update-time" id="updateTime">Last updated: Just now</div>
-        </div>
-        <div style="text-align: center; margin-top: 15px; font-size: 0.8rem;">
-            <i class="fas fa-info-circle"></i> Live scores update automatically.
-        </div>
-    </div>
-</section>
+          </a>
 
-<section id="odds" class="section">
-    <h2 class="section-title">🔥 LIVE BETTING ODDS 🔥</h2>
-    <div class="odds-grid">
-        <div class="match-card">
-            <div class="match-teams"><span>MI</span> <span>VS</span> <span>CSK</span></div>
-            <div class="odds-row"><span>🏏 MI Win</span><button class="odd-btn" data-match="MI vs CSK" data-team="MI">1.85x</button></div>
-            <div class="odds-row"><span>🏏 CSK Win</span><button class="odd-btn" data-match="MI vs CSK" data-team="CSK">2.10x</button></div>
-            <div class="odds-row"><span>🏏 Top Batsman</span><button class="odd-btn">3.40x</button></div>
-        </div>
-        <div class="match-card">
-            <div class="match-teams"><span>IND</span> <span>VS</span> <span>AUS</span></div>
-            <div class="odds-row"><span>🇮🇳 India</span><button class="odd-btn" data-match="IND vs AUS" data-team="IND">1.72x</button></div>
-            <div class="odds-row"><span>🇦🇺 Australia</span><button class="odd-btn" data-match="IND vs AUS" data-team="AUS">2.25x</button></div>
-            <div class="odds-row"><span>🏆 Toss Winner</span><button class="odd-btn">1.90x</button></div>
-        </div>
-        <div class="match-card">
-            <div class="match-teams"><span>RCB</span> <span>VS</span> <span>RR</span></div>
-            <div class="odds-row"><span>RCB Win</span><button class="odd-btn">2.05x</button></div>
-            <div class="odds-row"><span>RR Win</span><button class="odd-btn">1.88x</button></div>
-            <div class="odds-row"><span>Sixes Over 8.5</span><button class="odd-btn">1.95x</button></div>
-        </div>
-    </div>
+          <!-- PLATFORM 2 -->
+          <a href="https://99exchs.live" target="_blank" rel="noopener noreferrer" class="platform-item group">
+            <div class="spinning-wheel-bg btn-grad-2"></div>
+            <div class="platform-content">
+              <img src="99exch-logo.png" alt="99EXCH Live Platform" class="platform-logo">
+              <span class="platform-text">99EXCHS</span>
+            </div>
+          </a>
 
-    <div class="bet-slip">
-        <h3><i class="fas fa-receipt"></i> QUICK BET SLIP (DEMO)</h3>
-        <p>Click on any odd above, then enter amount to simulate bet request</p>
-        <div class="slip-input">
-            <input type="text" id="selectedBet" placeholder="Selected bet" readonly>
-            <input type="number" id="betAmount" placeholder="Amount (₹)" value="1000">
-            <button id="placeBetBtn" class="btn-gold" style="border: none;">📞 SEND TO WHATSAPP</button>
+          <!-- PLATFORM 3 -->
+          <a href="https://11xplays.games" target="_blank" rel="noopener noreferrer" class="platform-item group">
+            <div class="spinning-wheel-bg btn-grad-3"></div>
+            <div class="platform-content">
+              <img src="11xplay-logo.png" alt="11XPLAYS Casino Platform" class="platform-logo">
+              <span class="platform-text">11XPLAYS</span>
+            </div>
+          </a>
+
+          <!-- PLATFORM 4 -->
+          <a href="https://laser247s.club" target="_blank" rel="noopener noreferrer" class="platform-item group">
+            <div class="spinning-wheel-bg btn-grad-4"></div>
+            <div class="platform-content">
+              <img src="laser247-logo.png" alt="LASER247S Betting Platform" class="platform-logo">
+              <span class="platform-text">LASER247S</span>
+            </div>
+          </a>
+
         </div>
-        <p id="betFeedback" style="font-size: 0.9rem; color: var(--accent-orange);"></p>
-        <small>*Demo interaction — Real bets placed via WhatsApp/Telegram</small>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="partners" class="section">
-    <h2 class="section-title">🤝 OUR PREMIUM PARTNERS 🤝</h2>
-    <div class="partners-grid">
-        <div class="partner-card"><div class="partner-logo"><i class="fas fa-crown"></i></div><div class="partner-name">IYERJI.WIN</div><p>Official Iyer Ji Platform</p><a href="https://iyerji.win" target="_blank" rel="noopener noreferrer" class="partner-link">Visit Site →</a></div>
-        <div class="partner-card"><div class="partner-logo"><i class="fas fa-exchange-alt"></i></div><div class="partner-name">99EXCHS.LIVE</div><p>High Odds Exchange</p><a href="https://99exchs.live" target="_blank" rel="noopener noreferrer" class="partner-link">Visit Site →</a></div>
-        <div class="partner-card"><div class="partner-logo"><i class="fas fa-gamepad"></i></div><div class="partner-name">11XPLAYS.GAMES</div><p>Casino & Sports Games</p><a href="https://11xplays.games" target="_blank" rel="noopener noreferrer" class="partner-link">Visit Site →</a></div>
-        <div class="partner-card"><div class="partner-logo"><i class="fas fa-laser-focus"></i></div><div class="partner-name">LASER247S.CLUB</div><p>Live Anytime Anywhere</p><a href="https://laser247s.club" target="_blank" rel="noopener noreferrer" class="partner-link">Visit Site →</a></div>
-    </div>
-</section>
-
-<section id="features" class="section">
-    <h2 class="section-title">ELITE PRIVILEGES</h2>
-    <div class="features-grid">
-        <div class="feature"><i class="fas fa-bolt"></i><h3>Lightning Payouts</h3><p>Average withdrawal under 3 minutes — zero delays.</p></div>
-        <div class="feature"><i class="fas fa-headset"></i><h3>24/7 Concierge</h3><p>Personal assistant for every VIP member.</p></div>
-        <div class="feature"><i class="fas fa-chart-simple"></i><h3>Best Market Odds</h3><p>Higher returns than any local bookie.</p></div>
-        <div class="feature"><i class="fas fa-shield-heart"></i><h3>100% Secure</h3><p>Encrypted & anonymous platform.</p></div>
-    </div>
-</section>
-
-<section id="winners" class="section">
-    <h2 class="section-title">🏆 WEEKLY CHAMPIONS 🏆</h2>
-    <table class="winner-table">
-        <thead><tr><th>Rank</th><th>Username</th><th>Prize (₹)</th><th>Date</th></tr></thead>
-        <tbody>
-            <tr><td>🥇 1</td><td>KingIyer_77</td><td>₹12,40,000</td><td>06 Apr 2026</td></tr>
-            <tr><td>🥈 2</td><td>RohitPremium</td><td>₹8,75,000</td><td>06 Apr 2026</td></tr>
-            <tr><td>🥉 3</td><td>Luckyladki</td><td>₹5,20,000</td><td>05 Apr 2026</td></tr>
-            <tr><td>4</td><td>IyerBhai</td><td>₹3,90,000</td><td>05 Apr 2026</td></tr>
-            <tr><td>5</td><td>HighRoller99</td><td>₹2,65,000</td><td>04 Apr 2026</td></tr>
-        </tbody>
-    </table>
-    <p style="text-align: right; margin-top: 20px;"><i class="fas fa-trophy"></i> Next big contest: 15th April – Grand ₹1CR GTD</p>
-</section>
-
-<section id="contact" class="section">
-    <h2 class="section-title">GET IN TOUCH WITH IYER JI TEAM</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
-            <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #25D366;"></i>
-            <h3>WhatsApp Betting</h3>
-            <p>Send "BET" to +44 7476 956299</p>
-            <a href="https://wa.me/447476956299" class="btn-gold" style="margin-top: 15px; display: inline-block;">Chat Now</a>
+    <!-- PLAYER DASHBOARD -->
+    <section class="py-8 px-5 max-w-5xl mx-auto">
+      <div class="premium-panel rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-user-shield text-3xl text-[#f97316]"></i>
+          <h3 class="text-2xl font-black text-white uppercase">Player Dashboard</h3>
         </div>
-        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
-            <i class="fab fa-telegram" style="font-size: 2.5rem; color: #0088cc;"></i>
-            <h3>Telegram Channel</h3>
-            <p>Get daily tips & exclusive odds</p>
-            <a href="https://t.me/iyerjionlinebook" class="btn-gold" style="margin-top: 15px; display: inline-block;">Join Now</a>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-[#020617] border border-[#f97316]/40 p-4 rounded-xl flex items-center gap-4">
+            <div class="bg-[#f97316]/20 p-3 rounded-lg"><i class="fas fa-gift text-2xl text-[#f97316]"></i></div>
+            <div>
+              <h4 class="text-lg font-bold text-white">12% Welcome Bonus</h4>
+              <p class="text-xs text-gray-400">On your very first new ID deposit</p>
+            </div>
+          </div>
+          <div class="bg-[#020617] border border-[#f97316]/40 p-4 rounded-xl flex items-center gap-4">
+            <div class="bg-[#f97316]/20 p-3 rounded-lg"><i class="fas fa-handshake text-2xl text-[#f97316]"></i></div>
+            <div>
+              <h4 class="text-lg font-bold text-white">15% Friend Refer Bonus</h4>
+              <p class="text-xs text-gray-400">Invite friends and earn lifetime</p>
+            </div>
+          </div>
         </div>
-        <div style="background: #2c070b; padding: 30px; border-radius: 32px; min-width: 260px;">
-            <i class="fab fa-instagram" style="font-size: 2.5rem; color: #E4405F;"></i>
-            <h3>Instagram</h3>
-            <p>Follow for winner shoutouts</p>
-            <a href="https://instagram.com/iyerjionlinebook" class="btn-gold" style="margin-top: 15px; display: inline-block;">Follow</a>
+      </div>
+    </section>
+
+    <!-- DEPOSIT & WITHDRAWAL -->
+    <section class="py-8 px-5 max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+      <div class="premium-panel rounded-2xl p-6">
+        <h3 class="text-xl font-black text-white mb-4"><i class="fas fa-wallet text-[#f97316] mr-2"></i> Deposit Rules</h3>
+        <ul class="text-sm text-gray-300 space-y-3 font-medium">
+          <li><i class="fas fa-angle-right text-[#f97316] mr-2"></i> Deposit ke liye WhatsApp par updated QR mangein.</li>
+          <li><i class="fas fa-angle-right text-[#f97316] mr-2"></i> Payment karke Success Screenshot bhejein.</li>
+          <li class="text-white mt-4 p-3 bg-red-900/40 rounded-lg border border-red-500/50">
+            <i class="fas fa-exclamation-triangle text-red-500 mr-1"></i> Note: Hamesha new QR par hi pay karein.
+          </li>
+        </ul>
+      </div>
+      <div class="premium-panel rounded-2xl p-6">
+        <h3 class="text-xl font-black text-white mb-4"><i class="fas fa-money-check-alt text-[#f97316] mr-2"></i> Withdrawal Rules</h3>
+        <ul class="text-sm text-gray-300 space-y-3 font-medium">
+          <li><i class="fas fa-stopwatch text-[#f97316] mr-2"></i> Fast Processing: Sirf 5 se 10 min me clear.</li>
+          <li><i class="fas fa-phone-slash text-red-400 mr-2"></i> No Spam: Baar-baar msg/call na karein.</li>
+          <li><i class="fas fa-ban text-red-400 mr-2"></i> Strict Action: Fake details par ID block hogi.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SUPPORT & COMPLAINT -->
+    <section class="py-10 px-5 max-w-5xl mx-auto">
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e3a8a] rounded-2xl p-6 border border-[#f97316]/30 shadow-2xl flex flex-col md:flex-row gap-6">
+        <div class="flex-1 text-center md:text-left">
+          <h3 class="text-xl font-black text-white mb-2"><i class="fas fa-headset text-[#f97316] mr-2"></i> 24/7 Support</h3>
+          <p class="text-gray-300 text-sm mb-4">Nayi ID ya general jankari ke liye.</p>
+          <a href="https://wa.link/7hh44n" class="inline-block bg-[#0f172a] border border-[#f97316] hover:bg-[#f97316] hover:text-white text-[#f97316] font-bold py-3 px-6 rounded-xl transition">Contact Support</a>
         </div>
-    </div>
-    <div style="margin-top: 50px; background: #0f0103; border-radius: 32px; padding: 30px; text-align: center;">
-        <p style="font-size: 1.2rem;">📞 CUSTOMER SUPPORT: 24x7 | DM on WhatsApp / Telegram for instant resolution.</p>
-        <p style="margin-top: 15px;">📍 Licensed under Curacao Gaming | Responsible gaming 18+</p>
-    </div>
-</section>
+        <div class="w-full md:w-px bg-[#1e3a8a]"></div>
+        <div class="flex-1 text-center md:text-right">
+          <h3 class="text-xl font-black text-white mb-2"><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> Complaint</h3>
+          <p class="text-gray-300 text-sm mb-4">Deposit/Withdrawal issue direct senior ko report karein.</p>
+          <a href="https://wa.link/5iyj2p" class="inline-block bg-red-900/50 border border-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-xl transition">Report Issue</a>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    <div class="footer-flex">
-        <div><div class="logo" style="font-size: 1.8rem;"><i class="fas fa-crown"></i> IYER JI ONLINE BOOK</div><p style="margin-top: 15px;">India's most innovative betting platform.<br>Secure • Fast • Premium</p></div>
-        <div><h4 style="color: var(--accent-orange);">Quick Links</h4><ul style="list-style: none; margin-top: 10px;"><li>Terms & Conditions</li><li>Privacy Policy</li><li>Responsible Gaming</li><li>Affiliate Program</li></ul></div>
-        <div><h4 style="color: var(--accent-orange);">Connect</h4><div class="social-icons"><a href="https://wa.me/447476956299"><i class="fab fa-whatsapp"></i></a><a href="https://t.me/iyerjionlinebook"><i class="fab fa-telegram"></i></a><a href="https://instagram.com/iyerjionlinebook"><i class="fab fa-instagram"></i></a></div><p style="margin-top: 20px;">© 2026 Iyer Ji Online Book</p></div>
-    </div>
-</footer>
+    <!-- FOOTER WITH SEO LINKS & WARNINGS -->
+    <footer class="bg-black py-8 border-t border-[#1e3a8a] text-center pb-24 px-4">
+      
+      <!-- 18+ Warning (Crucial for Casino SEO) -->
+      <div class="max-w-3xl mx-auto mb-6 bg-red-900/30 border border-red-500/50 p-4 rounded-lg">
+        <h4 class="text-red-500 font-bold text-lg mb-2"><i class="fas fa-exclamation-triangle mr-2"></i> 18+ Only | Responsible Gaming</h4>
+        <p class="text-gray-400 text-xs leading-relaxed">This platform is strictly for users above 18 years of age. Sports betting and casino games involve financial risk and can be addictive. Please play responsibly and at your own risk. Iyer Ji Online does not promote illegal gambling.</p>
+      </div>
 
-<div class="whatsapp-popup">
-    <div id="whatsappBubble" class="popup-bubble" style="display: flex;">
-        <i class="fab fa-whatsapp"></i> Need help? Chat with us!
-        <span class="close-popup" id="closeBubble">✕</span>
-    </div>
-    <div class="whatsapp-icon" id="whatsappIcon">
+      <div class="flex flex-wrap justify-center gap-4 text-xs font-semibold text-gray-400 mb-6">
+        <a href="privacy-policy.html" class="hover:text-orange-400 transition">Privacy Policy</a>
+        <span>|</span>
+        <a href="terms.html" class="hover:text-orange-400 transition">Terms & Conditions</a>
+        <span>|</span>
+        <a href="responsible-gaming.html" class="hover:text-orange-400 transition">Responsible Gaming</a>
+      </div>
+
+      <div class="flex justify-center mb-4">
+        <img src="Logo.png" alt="IYER JI Official Site" class="h-14 w-auto object-contain opacity-80">
+      </div>
+      <p class="text-xs text-gray-500">© <span id="year"></span> Iyer Ji Online. All Rights Reserved | 100% Secure & Trusted Since 2006.</p>
+    </footer>
+
+    <!-- FLOATING BUBBLES -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
+      <a href="https://t.me/iyerjionlinebook" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-[#0088cc] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_0_15px_rgba(0,136,204,0.6)] hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+      <a href="https://wa.me/918458956033?text=I%20want%20New%20ID" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-110 transition-transform duration-300">
         <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
-</div>
 
-<script>
-    // mobile menu toggle
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const navLinksEl = document.getElementById('navLinks');
-    if(mobileBtn) {
-        mobileBtn.addEventListener('click', () => navLinksEl.classList.toggle('show'));
-        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinksEl.classList.remove('show')));
-    }
+  </div>
 
-    // smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if(href === "#") return;
-            const target = document.querySelector(href);
-            if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-        });
-    });
-
-    // Bet slip logic
-    const betInput = document.getElementById('selectedBet');
-    const placeBtn = document.getElementById('placeBetBtn');
-    const betFeedbackSpan = document.getElementById('betFeedback');
-    let currentSelection = "";
-    document.querySelectorAll('.odd-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const match = btn.getAttribute('data-match');
-            const team = btn.getAttribute('data-team');
-            let label = (match && team) ? `${match} - ${team} win @ ${btn.innerText}` : btn.innerText + " odds";
-            currentSelection = label;
-            if(betInput) betInput.value = currentSelection;
-            if(betFeedbackSpan) betFeedbackSpan.innerHTML = "✅ Selected: " + currentSelection;
-        });
-    });
-    if(placeBtn) {
-        placeBtn.addEventListener('click', () => {
-            const amount = document.getElementById('betAmount').value;
-            if(!currentSelection && (!betInput || !betInput.value)) { 
-                if(betFeedbackSpan) betFeedbackSpan.innerHTML = "⚠️ Please select an odd first!"; 
-                return; 
-            }
-            const selected = currentSelection || (betInput ? betInput.value : "");
-            if(!amount || amount <= 0) { 
-                if(betFeedbackSpan) betFeedbackSpan.innerHTML = "⚠️ Enter valid bet amount"; 
-                return; 
-            }
-            const whatsappMsg = `*New Bet Request*%0A*Selection:* ${selected}%0A*Amount:* ₹${amount}%0A*User:* Iyer Ji Player`;
-            window.open(`https://wa.me/447476956299?text=${whatsappMsg}`, '_blank');
-            if(betFeedbackSpan) betFeedbackSpan.innerHTML = `📤 Redirecting to WhatsApp with ₹${amount} on ${selected}.`;
-            setTimeout(() => { if(betFeedbackSpan) betFeedbackSpan.innerHTML = ""; }, 4000);
-        });
-    }
-
-    // animated member count
-    const memberSpan = document.getElementById('memberCount');
-    if(memberSpan) {
-        let count = 0, target = 15780;
-        const update = setInterval(() => {
-            if(count < target) { count += Math.ceil(target / 55); if(count > target) count = target; memberSpan.innerText = count.toLocaleString() + "+"; }
-            else clearInterval(update);
-        }, 35);
-    }
-
-    // LIVE IPL SCORE SIMULATION
-    let scoreInterval;
-    const team1NameElem = document.getElementById('team1Name'), team2NameElem = document.getElementById('team2Name');
-    const team1ScoreElem = document.getElementById('team1Score'), team2ScoreElem = document.getElementById('team2Score');
-    const team1OversElem = document.getElementById('team1Overs'), team2OversElem = document.getElementById('team2Overs');
-    const updateTimeElem = document.getElementById('updateTime');
-    if(team1NameElem) {
-        const matches = [
-            { team1: "Mumbai Indians", team2: "Chennai Super Kings" },
-            { team1: "Royal Challengers B", team2: "Rajasthan Royals" },
-            { team1: "Kolkata Knight Riders", team2: "Delhi Capitals" },
-            { team1: "Sunrisers Hyderabad", team2: "Punjab Kings" }
-        ];
-        const scoreUpdates = [
-            { score1: "185/4", overs1: "(18.2)", score2: "120/3", overs2: "(14.0)" },
-            { score1: "189/4", overs1: "(19.0)", score2: "125/3", overs2: "(15.0)" },
-            { score1: "192/5", overs1: "(19.4)", score2: "130/4", overs2: "(16.0)" },
-            { score1: "195/5", overs1: "(20.0)", score2: "135/4", overs2: "(17.0)" },
-            { score1: "195/5", overs1: "(20.0)", score2: "140/5", overs2: "(18.0)" },
-            { score1: "195/5", overs1: "(20.0)", score2: "145/5", overs2: "(19.0)" },
-            { score1: "195/5", overs1: "(20.0)", score2: "150/6", overs2: "(20.0)" }
-        ];
-        let matchIndex = 0, scoreIndex = 0;
-        function updateLiveScore() {
-            const currentMatch = matches[matchIndex];
-            const currentUpdate = scoreUpdates[scoreIndex % scoreUpdates.length];
-            team1NameElem.innerText = currentMatch.team1;
-            team2NameElem.innerText = currentMatch.team2;
-            team1ScoreElem.innerText = currentUpdate.score1;
-            team1OversElem.innerText = currentUpdate.overs1;
-            team2ScoreElem.innerText = currentUpdate.score2;
-            team2OversElem.innerText = currentUpdate.overs2;
-            if(updateTimeElem) updateTimeElem.innerText = `Last updated: ${new Date().toLocaleTimeString()}`;
-            scoreIndex++;
-            if (scoreIndex % 10 === 0) matchIndex = (matchIndex + 1) % matches.length;
-        }
-        updateLiveScore();
-        scoreInterval = setInterval(updateLiveScore, 5000);
-        window.addEventListener('beforeunload', () => { if (scoreInterval) clearInterval(scoreInterval); });
-    }
-
-    // WhatsApp Popup Logic
-    const bubble = document.getElementById('whatsappBubble');
-    const closeBubble = document.getElementById('closeBubble');
-    const whatsappIcon = document.getElementById('whatsappIcon');
-    const waNumber = '447476956299';
-    function openWhatsApp() { window.open(`https://wa.me/${waNumber}`, '_blank'); }
-    if(whatsappIcon) whatsappIcon.addEventListener('click', openWhatsApp);
-    if(bubble && closeBubble) {
-        closeBubble.addEventListener('click', (e) => { e.stopPropagation(); bubble.style.display = 'none'; });
-        bubble.addEventListener('click', openWhatsApp);
-        setTimeout(() => { if(bubble) bubble.style.display = 'none'; }, 8000);
-    }
-</script>
+  <script>
+    // Set Year dynamically
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
