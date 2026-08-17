@@ -48,6 +48,54 @@
       overflow-x: hidden;
     }
 
+    /* ☁️ BADAL (CLOUD) WELCOME PRELOADER STYLES ☁️ */
+    #welcome-preloader {
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    .cloud-card {
+      background: radial-gradient(circle at 50% 50%, rgba(30, 15, 50, 0.95), rgba(10, 5, 20, 0.98));
+      border: 2px solid rgba(245, 158, 11, 0.6);
+      /* Badal (Cloud) soft curve shape */
+      border-radius: 50px 20px 50px 20px / 20px 50px 20px 50px;
+      box-shadow: 0 0 50px rgba(245, 158, 11, 0.5), inset 0 0 25px rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      position: relative;
+      animation: popIn 0.5s ease-out forwards, cloudFloat 2.5s ease-in-out infinite alternate;
+    }
+
+    /* Badal (Cloud) extra decorative bumps */
+    .cloud-card::before, .cloud-card::after {
+      content: '';
+      position: absolute;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .cloud-card::before {
+      width: 80px;
+      height: 80px;
+      top: -30px;
+      left: 30px;
+    }
+    .cloud-card::after {
+      width: 90px;
+      height: 90px;
+      bottom: -30px;
+      right: 30px;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.6); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes cloudFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-12px); }
+    }
+
     /* 🎰 DYNAMIC LIVE CASINO & CRICKET FLOATING BACKGROUND 🎰 */
     .casino-bg {
       position: fixed;
@@ -227,6 +275,31 @@
 
 <body oncontextmenu="return false;">
 
+  <!-- ☁️ WELCOME BADAL PRELOADER (AUTOMATICALLY HIDES IN 2.5 SECONDS) ☁️ -->
+  <div id="welcome-preloader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-[#030108]/90 backdrop-blur-md px-4">
+    <div class="cloud-card flex flex-col items-center text-center p-8 sm:p-10 max-w-sm w-full mx-auto">
+      <!-- Welcome Logo -->
+      <img src="Logo.png" alt="Welcome to Iyer Ji Club" class="h-14 sm:h-16 w-auto object-contain mb-3 drop-shadow-[0_0_15px_rgba(245,158,11,0.8)]">
+      
+      <!-- Welcome Text -->
+      <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/40 mb-2">
+        👑 Official Portal
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">WELCOME TO</h2>
+      <h3 class="text-xl sm:text-2xl font-black text-orange-grad uppercase">IYER JI ONLINE BOOK</h3>
+      
+      <p class="text-xs text-gray-300 font-semibold mt-3">
+        ⚡ 5000+ Live Casino & Cricket ID <br>
+        ⚡ 5-Min Withdrawal | Trusted Since 2006
+      </p>
+
+      <!-- Small loader indicator -->
+      <div class="mt-5 flex items-center gap-2 text-amber-400 text-xs font-bold">
+        <i class="fas fa-spinner fa-spin text-base"></i> Loading Games...
+      </div>
+    </div>
+  </div>
+
   <!-- 🎰 LIVE FLOATING CASINO BACKGROUND 🎰 -->
   <div class="casino-bg">
     <div class="glow-blob blob-1"></div>
@@ -247,11 +320,10 @@
       </div>
     </div>
 
-    <!-- NAVBAR (MEDIUM SIZE LOGO APPLIED) -->
+    <!-- NAVBAR (MEDIUM SIZE LOGO) -->
     <nav class="bg-[#05030a]/90 backdrop-blur-md sticky top-0 z-50 border-b border-amber-500/20 py-2.5">
       <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
         <div class="flex items-center">
-          <!-- Logo size balanced to medium (h-10 sm:h-12) -->
           <img src="Logo.png" alt="IYER JI Logo - Premium Cricket ID" class="h-10 sm:h-12 w-auto object-contain drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]">
         </div>
         <div class="flex items-center gap-3">
@@ -522,7 +594,7 @@
       </div>
     </section>
 
-    <!-- FOOTER (MEDIUM LOGO APPLIED) -->
+    <!-- FOOTER -->
     <footer class="bg-black/80 backdrop-blur-md py-8 border-t border-amber-500/20 text-center pb-24 px-4">
       <div class="max-w-3xl mx-auto mb-6 bg-red-950/40 border border-red-500/40 p-4 rounded-lg">
         <h4 class="text-red-400 font-bold text-lg mb-2"><i class="fas fa-exclamation-triangle mr-2"></i> 18+ Only | Responsible Gaming</h4>
@@ -538,7 +610,6 @@
       </div>
 
       <div class="flex justify-center mb-4">
-        <!-- Footer logo balanced to medium -->
         <img src="Logo.png" alt="IYER JI Official Site" class="h-10 sm:h-12 w-auto object-contain opacity-90 drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]">
       </div>
       <p class="text-xs text-gray-500">© <span id="year"></span> Iyer Ji Club. All Rights Reserved | 100% Secure & Trusted Since 2006.</p>
@@ -556,33 +627,38 @@
 
   </div>
 
-  <!-- SCRIPT FOR AUTOMATIC FLOATING CARDS & YEAR -->
+  <!-- SCRIPTS -->
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
+
+    // ☁️ AUTO-HIDE WELCOME PRELOADER AFTER 2.5 SECONDS (2500ms)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const preloader = document.getElementById('welcome-preloader');
+        if (preloader) {
+          preloader.style.opacity = '0';
+          preloader.style.visibility = 'hidden';
+          setTimeout(() => {
+            preloader.remove();
+          }, 600);
+        }
+      }, 2500); // 2.5 seconds gap
+    });
 
     // ♠️♥️♦️♣️ CONTINUOUS BACKGROUND FLOATING CARDS (PATTE) GENERATOR
     function spawnFloatingCard() {
       const container = document.getElementById('cards-container');
       if (!container) return;
 
-      // Cards symbols & suits (Patte)
       const cards = ['♠', '♥️', '♦️', '♣', '🂡', '🂮', '🃁', '🃎', '🃏', '🎲', '🪙', '🏏', '⚾'];
       const colors = ['#ef4444', '#fbbf24', '#ffffff', '#38ef7d', '#f43f5e', '#a855f7'];
 
       const card = document.createElement('div');
       card.className = 'dynamic-card';
-      
-      // Random card selection
-      const randomSymbol = cards[Math.floor(Math.random() * cards.length)];
-      card.innerHTML = randomSymbol;
+      card.innerHTML = cards[Math.floor(Math.random() * cards.length)];
 
-      // Random position (left 5% to 92%)
       const randomLeft = Math.floor(Math.random() * 87) + 5;
-      
-      // Random font size (28px to 48px)
       const randomSize = Math.floor(Math.random() * 20) + 28;
-
-      // Random color & speed (7 to 12 seconds float time)
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       const animationTime = (Math.random() * 5 + 7).toFixed(1);
 
@@ -593,16 +669,14 @@
 
       container.appendChild(card);
 
-      // Auto remove card after animation completes
       setTimeout(() => {
         card.remove();
       }, animationTime * 1000);
     }
 
-    // Har 2 second (2000ms) me ek naya patta/card continuous float hoke upar aayega
+    // Har 2 second me ek naya patta float hoga
     setInterval(spawnFloatingCard, 2000);
 
-    // Initial starting cards
     for (let i = 0; i < 4; i++) {
       setTimeout(spawnFloatingCard, i * 600);
     }
